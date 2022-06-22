@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="https://player.swigit.com/player/vendor.min.css" rel="stylesheet" />
+    <script src="https://player.swigit.com/player/vendor.js"></script>
+</head>
+
+<body>
+    <video id=example-video width=960 height=540 class="video-js vjs-default-skin" controls>
+        <source src="https://storeC2CTV.teleosmedia.com/vod/C2CTV/C2C_Sizzle_19_cut_6/playlist.m3u8"
+            type="application/x-mpegURL">
+    </video>
+    <script>
+        var player = videojs('example-video', {
+            techOrder: ["chromecast", "html5"],
+            muted: false,
+            loop: false,
+            fluid: true,
+			autoplay:true,
+            controls: true,
+            preload: "auto",
+            chromecast: {
+            },
+            plugins: {
+                chromecast: {
+                    receiverAppID: '646E7AC8',
+                    addButtonToControlBar: true,
+                },
+                airPlay: {
+                    addButtonToControlBar: true,
+                }
+            }
+        });
+        player.play();
+    </script>
+</body>
+
+</html>

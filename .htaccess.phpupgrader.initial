@@ -1,0 +1,5 @@
+RewriteCond %{SERVER_PORT} 80
+
+
+
+RewriteRule ^(.*)$ https://chords2cure.tv/$1 [L,R=301]
